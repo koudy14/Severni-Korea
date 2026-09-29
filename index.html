@@ -14,6 +14,26 @@
       font-family: Arial, sans-serif;
     }
 
+    nav {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline;
+      color: yellow;
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
     h1 {
       text-align: center;
       font-size: x-large;
@@ -68,11 +88,17 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#fakta">Zakladni fakta</a>
+    <a href="#zajimavosti">Zajimavosti</a>
+    <a href="#vlajka">Vlajka</a>
+  </nav>
+
   <h1>Severni Korea</h1>
 
   <p>Severni Korea, oficialne Koreiska lidove demokraticka republika, je stat ve vychodni Asii na severu Koreiskeho poloostrova.</p>
 
-  <h2>Zakladni fakta</h2>
+  <h2 id="fakta">Zakladni fakta</h2>
   <ul>
     <li>Hlavni mesto: Pchjongjang</li>
     <li>Rozloha: cca 120 540 km²</li>
@@ -80,15 +106,15 @@
     <li>Uredni jazyk: korejstina</li>
   </ul>
 
-  <h2>Zajimavosti</h2>
+  <h2 id="zajimavosti">Zajimavosti</h2>
   <ol>
     <li>Je jednou z posledne komunistickych zemi na svete</li>
     <li>Ma jeden z nejizolovanejsich rezimu na svete</li>
     <li>Hranici s Jiznou Koreou tvori jedna z nejvice strezenych hranic na svete</li>
   </ol>
 
-  <h2>Vlajka</h2>
-  <img src="image_1.jpg" width="400" height="300" alt="Vlajka Severni Koreje">
+  <h2 id="vlajka">Vlajka</h2>
+  <img src="severokorejska_vlajka.png" width="632" height="316" alt="Vlajka Severni Koreje">
 
   <a href="https://cs.wikipedia.org/wiki/Severn%C3%AD_Korea">Vice na Wikipedii</a>
 </body>
