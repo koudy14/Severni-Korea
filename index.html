@@ -2,6 +2,7 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Severni Korea</title>
   <style>
     body {
@@ -14,7 +15,7 @@
       font-family: Arial, sans-serif;
     }
 
-    nav {
+    header nav {
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       padding: 10px;
@@ -22,16 +23,24 @@
       text-align: center;
     }
 
-    nav a {
-      display: inline;
+    header nav a {
+      display: inline-block;
       color: yellow;
       margin: 0 15px;
       font-weight: bold;
       text-decoration: none;
     }
 
-    nav a:hover {
+    header nav a:hover {
       color: white;
+    }
+
+    .icon {
+      font-size: large;
+    }
+
+    .menu-text {
+      margin-left: 5px;
     }
 
     h1 {
@@ -74,7 +83,7 @@
       padding: 2px 0;
     }
 
-    a {
+    main a {
       display: block;
       text-align: center;
       color: yellow;
@@ -82,40 +91,78 @@
       font-weight: bold;
     }
 
-    a:hover {
+    main a:hover {
       color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 10px;
+      border-top: 2px solid yellow;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    /* Na mobilu zustanou v menu jen ikony, text zmizi */
+    @media (max-width: 480px) {
+      body {
+        width: auto;
+      }
+
+      .menu-text {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#fakta">Zakladni fakta</a>
-    <a href="#zajimavosti">Zajimavosti</a>
-    <a href="#vlajka">Vlajka</a>
-  </nav>
 
-  <h1>Severni Korea</h1>
+  <header>
+    <h1>Severni Korea</h1>
+    <nav>
+      <a href="#fakta"><span class="icon">📌</span><span class="menu-text">Zakladni fakta</span></a>
+      <a href="#zajimavosti"><span class="icon">❗</span><span class="menu-text">Zajimavosti</span></a>
+      <a href="#vlajka"><span class="icon">🏳️</span><span class="menu-text">Vlajka</span></a>
+    </nav>
+  </header>
 
-  <p>Severni Korea, oficialne Koreiska lidove demokraticka republika, je stat ve vychodni Asii na severu Koreiskeho poloostrova.</p>
+  <main>
+    <p>Severni Korea, oficialne Koreiska lidove demokraticka republika, je stat ve vychodni Asii na severu Koreiskeho poloostrova.</p>
 
-  <h2 id="fakta">Zakladni fakta</h2>
-  <ul>
-    <li>Hlavni mesto: Pchjongjang</li>
-    <li>Rozloha: cca 120 540 km²</li>
-    <li>Pocet obyvatel: pres 25 milionu</li>
-    <li>Uredni jazyk: korejstina</li>
-  </ul>
+    <h2 id="fakta">Zakladni fakta</h2>
+    <ul>
+      <li>Hlavni mesto: Pchjongjang</li>
+      <li>Rozloha: cca 120 540 km²</li>
+      <li>Pocet obyvatel: pres 25 milionu</li>
+      <li>Uredni jazyk: korejstina</li>
+    </ul>
 
-  <h2 id="zajimavosti">Zajimavosti</h2>
-  <ol>
-    <li>Je jednou z posledne komunistickych zemi na svete</li>
-    <li>Ma jeden z nejizolovanejsich rezimu na svete</li>
-    <li>Hranici s Jiznou Koreou tvori jedna z nejvice strezenych hranic na svete</li>
-  </ol>
+    <h2 id="zajimavosti">Zajimavosti</h2>
+    <ol>
+      <li>Je jednou z posledne komunistickych zemi na svete</li>
+      <li>Ma jeden z nejizolovanejsich rezimu na svete</li>
+      <li>Hranici s Jiznou Koreou tvori jedna z nejvice strezenych hranic na svete</li>
+    </ol>
 
-  <h2 id="vlajka">Vlajka</h2>
-  <img src="severokorejska_vlajka.png" width="632" height="316" alt="Vlajka Severni Koreje">
+    <h2 id="vlajka">Vlajka</h2>
+    <img src="severokorejska_vlajka.png" width="632" height="316" alt="Vlajka Severni Koreje">
 
-  <a href="https://cs.wikipedia.org/wiki/Severn%C3%AD_Korea">Vice na Wikipedii</a>
+    <a href="https://cs.wikipedia.org/wiki/Severn%C3%AD_Korea">Vice na Wikipedii</a>
+  </main>
+
+  <footer>
+    <p>Validace stranky:</p>
+    <a href="https://validator.w3.org/check?uri=referer">
+      <img src="https://www.w3.org/Icons/valid-html401-blue" alt="Valid HTML 4.01" height="31" width="88">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <img src="https://www.w3.org/Icons/valid-css-blue" alt="Valid CSS" height="31" width="88">
+    </a>
+  </footer>
+
 </body>
 </html>
